@@ -1,10 +1,7 @@
 FROM python:3
 
-WORKDIR /usr/src/app
+ADD my_script.py /
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
+RUN pip install pystrich
 
 CMD [ "python", "./my_script.py" ]
